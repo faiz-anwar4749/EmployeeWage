@@ -12,16 +12,18 @@ namespace master
             int EmpHours, EmpWage;
             Random rand = new Random();
             int check = rand.Next(0, 3);
-            if (check == IS_FULL_TIME)
+            switch (check)
             {
-                EmpHours = 8;
+                case 2:
+                    EmpHours = 8;
+                    break;
+                case 1:
+                    EmpHours = 4;
+                    break;
+                default:
+                    EmpHours = 0;
+                    break;
             }
-            else if (check == IS_PART_TIME)
-            {
-                EmpHours = 4;
-            }
-            else
-                EmpHours = 0;
             EmpWage = EmpHours * EMP_WAGE_PER_HOUR;
             Console.WriteLine("Employee Wages: " + EmpWage);
         }
