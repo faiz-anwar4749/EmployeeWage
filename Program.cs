@@ -6,18 +6,24 @@ namespace master
     {
         static void Main(string[] args)
         {
-            int FULL_TIME = 2;
+            int IS_FULL_TIME = 1;
+            int EMP_WAGE_PER_HOUR = 20;
+
+            int EmpHours = 0;
+            int EmpWage = 0;
             Random rand = new Random();
 
-            int EmployeeCheck = rand.Next(1, 3);
-            if (EmployeeCheck == FULL_TIME)
+            int empCheck = rand.Next(0, 2);
+            if (empCheck == IS_FULL_TIME)
             {
-                Console.WriteLine("Employee is Present");
+                EmpHours = 8;
             }
             else
             {
-                Console.WriteLine("Employee is Absent");
+                EmpHours = 0;
             }
+            EmpWage = EmpHours * EMP_WAGE_PER_HOUR;
+            Console.WriteLine("Employee Wage is: " + EmpWage);
         }
     }
 }
