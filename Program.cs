@@ -6,6 +6,7 @@ namespace master
     {
         static void Main(string[] args)
         {
+            //adding comments
             int IS_FULL_TIME = 2;
             int IS_PART_TIME = 1;
             int EMP_WAGE_PER_HOUR = 20;
